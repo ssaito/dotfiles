@@ -1,0 +1,18 @@
+# .emacs.d向け.gitignore
+# ホワイトリスト方式
+
+# 直下のファイル、ディレクトリを全て無視する
+/*
+
+# 無視しないリスト
+## ディレクトリ
+!/elisp
+!/inits
+!/snippet
+
+## ファイル
+!init.el
+!/.gitignore
+
+## ローカル環境依存用 config は無視する
+91-local-config.el

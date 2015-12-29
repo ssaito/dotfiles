@@ -1,0 +1,2 @@
+(require 'textile-mode)
+

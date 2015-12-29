@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# @(#) pre-commit: check local git user and e-mail.
+#
+# Usage:
+#  git からフックされるためそのまま使わない
+#
+# Description:
+#  git commit にフックされる local user、emailを確認するスクリプト
+#  リポジトリごとにユーザを設定し忘れないためのもの
+#  ref http://qiita.com/uasi/items/a340bb487ec07caac799
+#
+###############################################################################
+
+if [ -z "`git config --local user.name`" ]; then
+    echo "fatal: user.name is not set locally"
+    exit 1
+fi
+if [ -z "`git config --local user.email`" ]; then
+    echo "fatal: user.email is not set locally"
+    exit 1
+fi

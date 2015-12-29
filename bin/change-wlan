@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# @(#) change-wlan:change wireless network profile.
+#
+# Usage: 
+#  change-wlan NETWORK_PROLILE [-h]
+#
+# Description:
+#  無線LANのプロファイルを切り替える。Windows用。
+#  無線LANのプロファイルは登録されていなければならない。
+#
+###############################################################################
+
+PROG=`basename $0`
+INTERFACE="wireless-network"
+
+usage () {
+    cat <<USAGE
+Usage: $PROG NETWORK_PROLILE [-h]
+  Change wireless network for windows7.
+  NETWORK_PROLILE   Wireless network prolie is SSID mostly.
+  -h                Usage
+USAGE
+}
+
+for arg in "$@"; do
+    if [ "$arg" = "-h" -o "$arg" = "--help" ]; then
+        usage
+        exit 0
+    fi
+done
+
+if [ $# -lt 1 ]; then
+    usage
+    exit 0
+fi
+
+# 現在のプロファイルを切断
+netsh wlan disconnect | nkf -w | dos2unix
+
+# 指定されたプロファイルで接続する
+netsh wlan connect name="$1" interface="${INTERFACE}" | nkf -w | dos2unix

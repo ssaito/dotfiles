@@ -1,0 +1,43 @@
+# プロンプト設定
+
+## set prompt
+#setopt prompt_subst
+
+## バージョン管理システムモジュール
+#autoload -Uz vcs_info
+
+# TimeZoneの設定 ThunderBird に合わせる
+#export TZ=JST-9
+
+# エイリアス
+
+# 指定したファイルを windows として開く 
+alias open='cygstart.exe'
+
+alias ls='ls -F --show-control-chars --color=auto'
+alias ll='ls -l --show-control-chars --color=auto'
+
+## start application
+alias chrome='open  /cygdrive/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
+alias ie='open /cygdrive/c/Program\ Files\ \(x86\)/Internet\ Explorer/iexplore.exe'
+alias mailer='open /cygdrive/c/Program\ Files\ \(x86\)/Microsoft\ Office/Office14/OUTLOOK.EXE'
+#alias runemacs='/cygdrive/c/emacs/emacs-24.5/bin/runemacs.exe'
+alias e='/cygdrive/c/emacs/emacs-24.5/bin/emacsclientw.exe -n'
+#alias emacsclient='/cygdrive/c/emacs/emacs-24.5/bin/emacsclientw.exe -n'
+export PATH="$PATH:/cygdrive/c/emacs/emacs-24.5/bin"
+
+## windows コマンドの文字コードを修正するためのオプション
+alias -g win-ccode='| nkf -w | dos2unix'
+
+## ln コマンドを DOSの mklink にする環境変数設定
+## ref https://cygwin.com/cygwin-ug-net/using.html#pathnames-symlinks
+export CYGWIN="winsymlinks:native $CYGWIN"
+export PATH="/usr/local/bin:$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+## emacs の el-getは cygwin install-infoではなく GNU Win 32 バイナリが必要
+# pathを通す
+export PATH="/cygdrive/c/GnuWin32/bin:$PATH"
+
+# ホームディレクトリへ
+cd ~

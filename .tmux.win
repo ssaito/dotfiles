@@ -1,0 +1,7 @@
+# tmux の windows 特有設定
+
+# コピーモードのコピーコマンド。cygwin のputclipを使う
+bind-key -t emacs-copy M-w copy-pipe "putclip"
+
+# C-t y 貼り付け。cygwinのgetclipを tmux のバッファにロード、貼り付け
+bind-key y run-shell "getclip | tmux load-buffer - ; tmux paste-buffer"
