@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: footer
+# key: footer
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+(provide `(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`)
+;;; `(file-name-nondirectory (buffer-file-name))` ends here

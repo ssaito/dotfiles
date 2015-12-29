@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: mtg_log
+# key: mtg_log
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+# ${1:MEETING NAME}
+
+* 日時:`(format-time-string "%Y/%m/%d" (current-time))`
+* 参加者:
+  +
+* 場所:
+
