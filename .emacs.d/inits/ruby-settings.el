@@ -1,7 +1,7 @@
-;; ruby-mode
-;; install:defalut
-;; ref http://kakakikikeke.blogspot.jp/2012/04/emacsruby-mode.html
-
+;;; ruby-settings.el --- ruby settings
+;;; Commentary:
+;; REPL buffer, debugger, yaml
+;;; Code:
 (autoload 'ruby-mode "ruby-mode" "Mode for editing ruby source files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
@@ -38,3 +38,5 @@
 ;; install by el-get
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(provide ruby-settings)
+;;; ruby-settings.el ends here
