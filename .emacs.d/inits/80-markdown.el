@@ -16,25 +16,24 @@
 ;; Enter押したときのオートインデントをOFF
 (setq markdown-indent-on-enter nil)
 
-;; ヘッダーの色を org-mode に合わせる
+
+;; header の色を org-mode に合わせて変更
 (custom-set-faces
- '(markdown-header-face-1 ((t (:inherit org-level-1))))
- '(markdown-header-face-2 ((t (:inherit org-level-2))))
- '(markdown-header-face-3 ((t (:inherit org-level-3))))
- '(markdown-header-face-4 ((t (:inherit org-level-4))))
- '(markdown-header-face-5 ((t (:inherit org-level-5))))
- '(markdown-header-face-6 ((t (:inherit org-level-6))))
+ '(markdown-header-delimiter-face ((t (:inherit org-mode-line-clock))))
+ '(markdown-header-face-1 ((t (:inherit outline-1 :weight bold))))
+ '(markdown-header-face-2 ((t (:i4nherit outline-2 :weight bold))))
+ '(markdown-header-face-3 ((t (:inherit outline-3 :weight bold))))
+ '(markdown-header-face-4 ((t (:inherit outline-4 :weight bold))))
+ '(markdown-header-face-5 ((t (:inherit outline-5 :weight bold))))
+ '(markdown-header-face-6 ((t (:inherit outline-6 :weight bold))))
+ '(markdown-pre-face ((t (:inherit org-formula))))
  )
 
-; ref http://wwwuser.gwdg.de/~jkremer/pandoc-mode.html
-; ref ~/.emacs.d/el-get/pandoc-mode/manual/pandoc-mode.text
 ; pandoc
 (load "pandoc-mode")
 
 ; 拡張子 .md .txt .text を開いたら自動的に pandoc-mode にする
 (add-hook 'markdown-mode-hook 'turn-on-pandoc)
-
-
 
 (provide '80-markdown)
 ;;; 80-markdown.el ends here

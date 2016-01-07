@@ -1,15 +1,15 @@
 #!/bin/sh
 
 # ホームディレクトリにリンクを作成する
-DOT_FILES=( .zshrc .gitconfig .tmux.conf)
+# DOT_FILES=( .zshrc .gitconfig .tmux.conf)
 
-for file in ${DOT_FILES[@]}
-do
-    ln -s $HOME/dotfiles/$file $HOME/$file
-    if [ $? -le 0 ]; then
-        echo "created $HOME/$file"
-    fi
-done
+# for file in ${DOT_FILES[@]}
+# do
+#     ln -s $HOME/dotfiles/$file $HOME/$file
+#     if [ $? -le 0 ]; then
+#         echo "created $HOME/$file"
+#     fi
+# done
 
 if [ "$(uname)" == 'Darwin' ]; then
   OS='Mac'
@@ -48,7 +48,6 @@ else
 fi
 
 # for git
-
 git config user.name "ssaito"
 git config user.email "shinya.saito.25a@gmail.com"
 

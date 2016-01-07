@@ -4,6 +4,7 @@
 ;; 賢い自動補完機能
 ;; -----------------------------------------
 
+(el-get-bundle auto-complete)
 (require 'auto-complete)
 (require 'auto-complete-config)
 (global-auto-complete-mode t)

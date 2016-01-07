@@ -17,7 +17,6 @@
 
 ;; 入力支援
 (el-get-bundle yasnippet)
-(el-get-bundle auto-complete)
 (el-get-bundle fuzzy)
 
 ;; カラーテーマ

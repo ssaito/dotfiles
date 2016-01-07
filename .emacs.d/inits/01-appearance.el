@@ -16,6 +16,12 @@
 ; sublime-themes
 (load-theme 'monokai t)
 
+(defun on-after-init ()
+  (unless (display-graphic-p (selected-frame))
+    (set-face-background 'default "unspecified-bg" (selected-frame))))
+
+(add-hook 'window-setup-hook 'on-after-init)
+
 ; ツールバー非表示
 (tool-bar-mode -1)
 
@@ -66,3 +72,28 @@
 (cond (window-system
        (setq x-select-enable-clipboard t)))
 
+; 行番号表示
+(global-linum-mode t)
+
+; 行番号の見た目
+(if window-system
+    (progn (set-face-attribute 'linum nil))
+    (progn (set-face-attribute 'linum nil
+                   :background "black"
+                   :foreground "white")))
+
+; 行番号フォーマット
+(setq linum-format "%5d ")
+
+; 行番号を表示しないモードの設定
+(setq linum-mode-inhibit-modes-list '(eshell-mode
+                                      shell-mode
+                                      calendar-mode
+                                      eww-mode
+                                      inf-ruby-mode
+                                      dirtree-mode))
+(defadvice linum-on (around linum-on-inhibit-for-modes)
+  "Stop the load of linum-mode for some major modes."
+  (unless (member major-mode linum-mode-inhibit-modes-list)
+    ad-do-it))
+(ad-activate 'linum-on)
