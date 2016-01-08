@@ -15,7 +15,6 @@
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 (define-key company-active-map (kbd "C-h") nil)
-;(define-key company-active-map (kbd "M-/") 'company-complete)
 (global-set-key (kbd "M-/") 'company-complete) 
 
 (defun company--insert-candidate2 (candidate)

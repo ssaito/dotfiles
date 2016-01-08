@@ -77,10 +77,11 @@
 
 ; 行番号の見た目
 (if window-system
-    (progn (set-face-attribute 'linum nil))
+    (progn (set-face-attribute 'linum nil
+                   :foreground "green"))
     (progn (set-face-attribute 'linum nil
                    :background "black"
-                   :foreground "white")))
+                   :foreground "green")))
 
 ; 行番号フォーマット
 (setq linum-format "%5d ")
