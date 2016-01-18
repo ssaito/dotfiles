@@ -44,7 +44,17 @@
 
 ; open-junk-file
 ; http://d.hatena.ne.jp/rubikitch/20080923/1222104034
+; 一時ファイルの作成
 (require 'open-junk-file)
+(defun open-junk-file ()
+  (interactive)
+  (let* ((file (expand-file-name
+                (format-time-string
+                 "%Y/%m/%Y-%m-%d-%H%M%S.txt" (current-time))
+                "~/junk/"))
+         (dir (file-name-directory file)))
+    (make-directory dir t)
+    (find-file-other-window file)))
 
 ; シンボリックリンクを開いた時の質問を消す
 (setq vc-follow-symlinks t)
