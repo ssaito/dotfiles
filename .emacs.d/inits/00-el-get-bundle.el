@@ -6,7 +6,7 @@
 
 ;;; Code:
 ; el-get の github アクセスを https に設定
-(setq el-get-github-default-url-type 'https)
+;(setq el-get-github-default-url-type 'https)
 
 ; recentf の拡張。最近開いたファイルリストが便利になる
 (el-get-bundle recentf-ext)
