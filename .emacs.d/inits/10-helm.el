@@ -31,6 +31,10 @@
 ;; find-file するときに TABで補完する
 (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 (define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+;; find-file の helm-action は backtab(shift+tab)
+(define-key helm-read-file-map (kbd "<backtab>") 'helm-select-action)
+(define-key helm-find-files-map (kbd "<backtab>") 'helm-select-action)
+
 
 ;; (defadvice helm-ff-kill-or-find-buffer-fname (around execute-only-if-exist activate)
 ;;     "Execute command only if CANDIDATE exists"
