@@ -47,6 +47,11 @@ else
   exit 1
 fi
 
+
+# mintty リンク
+ln -s ~/dotfiles/terminal/.minttyrc ~/.minttyrc
+
+
 # for git
 git config user.name "ssaito"
 git config user.email "shinya.saito.25a@gmail.com"

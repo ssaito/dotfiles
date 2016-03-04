@@ -1,0 +1,8 @@
+
+# tmux の windows 特有設定
+
+# コピーモードのコピーコマンド。/dev/clipboard
+bind-key -t emacs-copy M-w copy-pipe "cat > /dev/clipboard"
+
+# C-t y 貼り付け。tmux のバッファにロード、貼り付け
+bind-key y run-shell "cat /dev/clipboard | tmux load-buffer - && tmux paste-buffer"

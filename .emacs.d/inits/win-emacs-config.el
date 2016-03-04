@@ -61,6 +61,5 @@
         (setq ad-return-value (concat "'" argument "'")))
       ad-do-it))
 
-
 (provide 'win-emacs-config.el)
 ;;; win-emacs-config.el ends here
