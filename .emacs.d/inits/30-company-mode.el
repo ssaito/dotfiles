@@ -5,7 +5,7 @@
 ; delay を0に
 (setq company-idle-delay 0) 
 ; 補完を開始する文字数
-(setq company-minimum-prefix-length 3)
+(setq company-minimum-prefix-length 2)
 ; 候補の一番下でさらに下に行こうとすると一番上に戻る
 (setq company-selection-wrap-around t)
 
