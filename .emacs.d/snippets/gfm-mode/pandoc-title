@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: pandoc-title
+# key: pandoc
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+% ${1:title}
+% ${2:date}
+% ${3:auther}
