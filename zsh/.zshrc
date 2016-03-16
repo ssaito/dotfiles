@@ -1,4 +1,5 @@
 # 補完設定
+fpath=(~/dotfiles/zsh/zsh-completions/src $fpath)
 autoload -U compinit
 compinit
 
