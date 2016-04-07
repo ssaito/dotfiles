@@ -1,5 +1,7 @@
-
 # tmux の windows 特有設定
+
+# マウス関連
+set-option -g mouse on
 
 # コピーモードのコピーコマンド。/dev/clipboard
 bind-key -t emacs-copy M-w copy-pipe "cat > /dev/clipboard"

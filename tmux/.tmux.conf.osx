@@ -1,5 +1,8 @@
 # tmux のMac OSX の設定
 
+# マウス関連
+set-option -g mouse on
+
 # コピー。キーバインドはemacs "M-w"
 bind-key -t emacs-copy M-w copy-pipe "reattach-to-user-namespace pbcopy"
 

@@ -9,8 +9,20 @@
 
 ; el-get の github アクセスを https に設定
 (setq el-get-github-default-url-type 'https)
+
+
 (add-to-list 'load-path (locate-user-emacs-file "el-get/el-get"))
 (unless (require 'el-get nil 'noerror)
+  ; 環境変数 http_proxy があったらproxy 設定
+  (if (getenv "HTTP_PROXY")
+      (url-request-extra-headers 
+       `(("Authorization" . ,(concat
+                              "Basic "
+                              (base64-encode-string
+                               (concat
+                                (getenv "proxy_user") ":"
+                                (getenv "proxy_password"))))))))
+   
   (with-current-buffer
       (url-retrieve-synchronously
        "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")

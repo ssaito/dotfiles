@@ -24,10 +24,10 @@ pacman -S curl
 
 # バージョン管理
 pacman -S git
-pacman listall subversion       
+pacman -S subversion       
 
-# クリップボード操作 putclip, getclip
-# pacman -S cygutils-extra
+# emacs
+pacman -S mingw-w64-x86_64-emacs
 
 # ファイル同期
 pacman -S rsync
