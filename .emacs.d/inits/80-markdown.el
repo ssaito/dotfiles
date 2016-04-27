@@ -20,7 +20,7 @@
 
 ;; header の色を org-mode に合わせて変更
 (custom-set-faces
- '(markdown-header-delimiter-face ((t (:inherit org-mode-line-clock))))
+ '(markdown-header-delimiter-face ((t (:inherit default))))
  '(markdown-header-face-1 ((t (:inherit outline-1 :weight bold))))
  '(markdown-header-face-2 ((t (:inherit outline-2 :weight bold))))
  '(markdown-header-face-3 ((t (:inherit outline-3 :weight bold))))
