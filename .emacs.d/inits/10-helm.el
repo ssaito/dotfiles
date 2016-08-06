@@ -44,6 +44,12 @@
 ;; Emacs コマンド履歴を保存
 (setq helm-M-x-always-save-history t)
 
+;; face
+(custom-set-faces
+  '(helm-ff-directory ((t (:background "#000000" :foreground "#5FD7FF"))))
+)
+
+
 ;; helm-descbinds
 (require 'helm-descbinds)
 (helm-descbinds-mode 1)
