@@ -11,9 +11,9 @@ alias ls='ls -F --show-control-chars --color=auto'
 alias ll='ls -l --show-control-chars --color=auto'
 
 ## start application
-alias runemacs='/c/emacs/emacs-24.5/bin/runemacs.exe'
-alias e='/c/emacs/emacs-24.5/bin/emacsclientw.exe -n'
-export PATH="$PATH:/cygdrive/c/emacs/emacs-24.5/bin"
+alias runemacs='/c/emacs/bin/runemacs.exe'
+alias e='/c/emacs/bin/emacsclientw.exe -n'
+export PATH="$PATH:/c/emacs/bin"
 
 ## コマンドプロンプトのコマンドは winpty 経由で実行する
 alias ping='winpty ping'
@@ -23,6 +23,5 @@ alias nslookup='winpty nslookup'
 alias reg='winpty reg'
 
 ## ln コマンドを DOSの mklink にする環境変数設定
-## ref https://cygwin.com/cygwin-ug-net/using.html#pathnames-symlinks
-export CYGWIN="winsymlinks:native $CYGWIN"
-export PATH="/usr/local/bin:$HOME/.rbenv/bin:$PATH"
+## ref http://qiita.com/ubnt_intrepid/items/0d9ea1c792dd2049d71c
+export MSYS='winsymlinks:nativestrict'

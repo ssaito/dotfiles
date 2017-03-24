@@ -6,7 +6,7 @@
 #  packman
 #
 # Description:
-#  pacmanを使ってcygwin用のパッケージをインストールする
+#  pacmanを使って msys2 用のパッケージをインストールする
 #  brewfileからインスパイヤ
 #
 ###############################################################################
@@ -15,47 +15,41 @@
 pacman -Sy
 
 # シェル、ターミナル
-pacman -S zsh
-pacman -S tmux
+pacman -S --noconfirm zsh
+pacman -S --noconfirm tmux
 
 # webツール
-pacman -S wget
-pacman -S curl
+pacman -S --noconfirm wget
+pacman -S --noconfirm curl
 
 # バージョン管理
-pacman -S git
-pacman -S subversion       
-
-# emacs
-pacman -S mingw-w64-x86_64-emacs
+pacman -S --noconfirm git
+pacman -S --noconfirm subversion
 
 # ファイル同期
-pacman -S rsync
+pacman -S --noconfirm rsync
 
-# 回答
-pacman -S unzip
+# 圧縮・解凍
+pacman -S --noconfirm unzip
 
 ## SSH
-pacman -S openssh
-pacman -S openssl-devel 
+pacman -S --noconfirm openssh
+pacman -S --noconfirm openssl-devel 
 
 # windows用ラッパー
-pacman -S winpty
+pacman -S --noconfirm winpty
 
 # コンパイラなど
-pacman -S gcc-core
-pacman -S gcc-g++
-pacman -S make
-pacman -S autoconf
-pacman -S patch
+pacman -S --noconfirm make
+pacman -S --noconfirm autoconf
+pacman -S --noconfirm patch
 
 # lib系
-pacman -S libxml2
-pacman -S libxml2-devel
-pacman -S zlib-devel
-pacman -S libtool
-pacman -S libiconv
-pacman -S libiconv-devel
-pacman -S libxslt-devel
-pacman -S libffi-devel
-pacman -S libgdbm-devel
+pacman -S --noconfirm libxml2
+pacman -S --noconfirm libxml2-devel
+pacman -S --noconfirm zlib-devel
+pacman -S --noconfirm libtool
+pacman -S --noconfirm libiconv
+pacman -S --noconfirm libiconv-devel
+pacman -S --noconfirm libffi-devel
+pacman -S --noconfirm libgdbm-devel

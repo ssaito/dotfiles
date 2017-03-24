@@ -29,14 +29,6 @@
 (el-get-bundle! cygwin-mount)
 (cygwin-mount-activate)
 
-;; cygwin のコマンド群を PATHに通す
-(setenv "PATH"
-  (concat
-   "C:\\tools\\cygwin\\usr\\local\\bin" ";"
-   "C:\\tools\\cygwin\\usr\\bin" ";"
-   "C:\\tools\\cygwin\\bin" ";"
-   (getenv "PATH")))
-
 ;; リモートファイル編集機能の設定
 ;; ssh が利用できないため PuTTY の plink を代わりに使う
 (require 'tramp)
@@ -46,8 +38,8 @@
 ;; for el-get
 (setq el-get-install-info "C:\\GnuWin32\\bin\\install-info")
 (defadvice el-get-build (around use-quote4windows activate)
-  (flet ( (w32-shell-dos-semantics () t))
-    ad-do-it))
+  (cl-letf (lambda ((w32-shell-dos-semantics () t))
+    ad-do-it)))
 (setq w32-quote-process-args t)
 ;; shell-quote-argumentの問題回避
 (defvar quote-argument-for-windows-p t "enables `shell-quote-argument' workaround for windows.")

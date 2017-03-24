@@ -32,37 +32,44 @@ dotfiles だけでなくCLI環境構築に必要なファイルを管理する�
 * パッケージ管理のインストール
 * https://chocolatey.org/
 
-### CUIの環境整備
+### MSYS2 をインストールする
 
-#### apt-cygのインストール
+* http://www.msys2.org/
+* C:\msys64\msys2_shell.cmd を管理者で実行可能にする。
 
-wget https://raw.githubusercontent.com/transcode-open/apt-cyg/master/apt-cyg
-chmod 755 apt-cyg
-mv apt-cyg /usr/local/bin/
+``` 
+アイコンを右クリック、
+「プロパティ」 → 「互換性」 → 「管理者としてこのプログラムを実行する」にチェックを入れる
+ショートカットの場合、
+「プロパティ」 → 「詳細設定」→「管理者として実行」
+```
 
-wget
+### Pacman のプロキシ設定を行う
 
-nkfは パッケージとしてインストールできないため、ソースからビルドする。
-http://osdn.jp/projects/nkf/downloads/59912/nkf-2.1.3.tar.gz/
+C:\msys64\etc\profile.d 以下に proxy.sh を配置する。PROXY_USER、PROXY_PASSWORD、PROXY_HOST、PROXY_PORTは自身の環境に合わせて変更する
 
-#### ruby install
+``` shell
+export http_proxy=http://PROXY_USER:PROXY_PASSWORD@PROXY_HOST:PROXY_PORT/
+export https_proxy=http://PROXY_USER:PROXY_PASSWORD@PROXY_HOST:PROXY_PORT/
+export ftp_proxy=http://PROXY_USER:PROXY_PASSWORD@PROXY_HOST:PROXY_PORT/
+export HTTP_PROXY=http://PROXY_USER:PROXY_PASSWORD@PROXY_HOST:PROXY_PORT/
+export HTTPS_PROXY=http://PROXY_USER:PROXY_PASSWORD@PROXY_HOST:PROXY_PORT/
+export FTP_PROXY=http://PROXY_USER:PROXY_PASSWORD@PROXY_HOST:PROXY_PORT/
+```
 
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc.local
-echo 'eval "$(rbenv init -)"' >> ~/.zshrc.local
-$SHELL --login
+### パッケージインストール
 
-### フォント
+``` shell
+pacman -Sy
+pacman -S --noconfirm git
+git clone https://github.com/ssaito/dotfiles.git
+~/dotfiles/package/pacman.sh
+~/dotfiles/mklink-win.sh
+```
+
+
+### フォントのインストール
 
 * http://levien.com/type/myfonts/inconsolata.html
-
-#### Windows
-
 * コントロールパネル -> デスクトップのカスタマイズ→フォント」を開いて、ダウンロードしたフォントをドラッグ＆ドロップする
-
-### Emacsの環境整備
-* cask 
-
-http://cask.readthedocs.org/en/latest/guide/installation.html#windows-setup
 
