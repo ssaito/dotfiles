@@ -10,4 +10,5 @@
                          ("\\.win" . shell-script-mode)
                          ("\\.local" . shell-script-mode)
                          ) auto-mode-alist))
+(setq sh-basic-offset 2)
 ;;; 40-shell-script-mode.el ends here
