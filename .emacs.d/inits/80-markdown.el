@@ -30,11 +30,5 @@
  '(markdown-pre-face ((t (:inherit org-formula))))
  )
 
-; pandoc
-(load "pandoc-mode")
-
-; 拡張子 .md .txt .text を開いたら自動的に pandoc-mode にする
-(add-hook 'markdown-mode-hook 'turn-on-pandoc)
-
 (provide '80-markdown)
 ;;; 80-markdown.el ends here
