@@ -7,6 +7,11 @@
 
 ;; ファイル名の文字コード設定
 (setq default-file-name-coding-system 'shift_jis)
+;; text.txt のみMS-dos改行コード設定
+(add-hook 'gfm-mode-hook
+          '(lambda ()
+             (when 
+                 (setq buffer-file-coding-system 'utf-8-dos))))
 
 ;; カッコイイステータスバー
 (el-get-bundle! powerline)
