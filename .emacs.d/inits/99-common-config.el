@@ -9,7 +9,7 @@
 ; エンコード UTF-8
 (prefer-coding-system 'utf-8-unix)
 
-; emacs24 の描画を軽くする
+; emacs25 の描画を軽くする
 (setq-default bidi-display-reordering nil
               bidi-paragraph-direction (quote left-to-right))
 
@@ -63,11 +63,7 @@
 (setq recentf-max-saved-items nil)
 
 ;; Emacs Command Historyを保存する
-;(savehist-mode 1)
-;(setq savehist-file "~/.emacs.d/tmp/savehist")
-;; (setq desktop-globals-to-save '(extended-command-history))
-;; (setq desktop-files-not-to-save "")
-;; (desktop-save-mode 1)
+(savehist-mode 1)
 
 ;; 常に適用されるマイナーモードは表示しない
 (setq my_hidden-minor-modes

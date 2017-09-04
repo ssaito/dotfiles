@@ -1,5 +1,8 @@
 # tmux の windows 特有設定
 
+# zsh をデフォルトに
+set-option -g default-shell /bin/zsh
+
 # マウス関連
 set-option -g mouse on
 

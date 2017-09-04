@@ -40,9 +40,8 @@ pacman -S --noconfirm openssl-devel
 pacman -S --noconfirm winpty
 
 # コンパイラなど
-pacman -S --noconfirm make
-pacman -S --noconfirm autoconf
-pacman -S --noconfirm patch
+pacman -S --noconfirm base-devel
+pacman -S --noconfirm mingw-w64-x86_64-toolchain
 
 # lib系
 pacman -S --noconfirm libxml2
@@ -53,3 +52,6 @@ pacman -S --noconfirm libiconv
 pacman -S --noconfirm libiconv-devel
 pacman -S --noconfirm libffi-devel
 pacman -S --noconfirm libgdbm-devel
+
+# エディタ
+pacman -S mingw-w64-x86_64-emacs

@@ -29,9 +29,6 @@ dotfiles だけでなくCLI環境構築に必要なファイルを管理する�
 
 ## Windows 向けセットアップ
 
-* パッケージ管理のインストール
-* https://chocolatey.org/
-
 ### MSYS2 をインストールする
 
 * http://www.msys2.org/
@@ -42,6 +39,12 @@ dotfiles だけでなくCLI環境構築に必要なファイルを管理する�
 「プロパティ」 → 「互換性」 → 「管理者としてこのプログラムを実行する」にチェックを入れる
 ショートカットの場合、
 「プロパティ」 → 「詳細設定」→「管理者として実行」
+```
+
+* ショートカットのリンク先
+
+``` 
+C:\msys64\msys2_shell.cmd -mingw64
 ```
 
 ### Pacman のプロキシ設定を行う
@@ -67,6 +70,10 @@ git clone https://github.com/ssaito/dotfiles.git
 ~/dotfiles/mklink-win.sh
 ```
 
+* バイナリーダウンロード
+  + https://github.com/BurntSushi/ripgrep
+    - ripgrep は強力なgrep
+    - ダウンロードした rg.exe を /bin にコピーする
 
 ### フォントのインストール
 

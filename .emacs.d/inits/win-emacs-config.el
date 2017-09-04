@@ -25,7 +25,7 @@
 (set-fontset-font
    nil 'japanese-jisx0208
    (font-spec :family "メイリオ"))
-;; Inconsolataとメイリオの半角:全角の幅が1:2にするための設定
+Inconsolataとメイリオの半角:全角の幅が1:2にするための設定
 (setq face-font-rescale-alist
 	'((".*Inconsolata.*" . 1.2)
 	  (".*メイリオ.*" . 1.0)))

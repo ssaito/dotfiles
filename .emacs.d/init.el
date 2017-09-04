@@ -1,9 +1,10 @@
 ;;; package: --- emacs起動時の最初に読み込まれる設定ファイル
 ;;; Commentary:
 ;;; el-getとinit-loaderを使って設定ファイルをロード
-
 ;;; Code:
 ;; el-get: elisp のパッケージ管理ツール
+(package-initialize)
+
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
 

@@ -11,9 +11,7 @@ alias ls='ls -F --show-control-chars --color=auto'
 alias ll='ls -l --show-control-chars --color=auto'
 
 ## start application
-alias runemacs='/c/emacs/bin/runemacs.exe'
-alias e='/c/emacs/bin/emacsclientw.exe -n'
-export PATH="$PATH:/c/emacs/bin"
+alias e='emacsclientw.exe -n'
 
 ## コマンドプロンプトのコマンドは winpty 経由で実行する
 alias ping='winpty ping'
