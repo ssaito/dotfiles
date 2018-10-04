@@ -13,5 +13,5 @@
 (dolist (hook '(yaml-mode-hook
                 xml-mode-hook
                 python-mode-hook))
-  (add-hook hook 'highlight-indentation-current-column-mode-hook))
+  (add-hook hook 'highlight-indentation-current-column-mode))
 

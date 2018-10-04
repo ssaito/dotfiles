@@ -28,9 +28,6 @@
 ; yes or noをy or n
 (fset 'yes-or-no-p 'y-or-n-p)
 
-; ミニバッファの履歴を保存する
-(savehist-mode 1)
-
 ; ミニバッファの履歴の保存数を増やす
 (setq history-length 30000)
 
@@ -75,6 +72,11 @@
               (cons (list mode "")
                     (assq-delete-all mode minor-mode-alist))))
       my_hidden-minor-modes)
+
+;; 自分用のヘルプ
+(defun my-help ()
+  (interactive)
+ (switch-to-buffer (buffer-name (find-file-noselect "~/.emacs.d/my-help.md"))))
 
 (provide '99-common-config)
 ;;; 99-common-config.el ends here

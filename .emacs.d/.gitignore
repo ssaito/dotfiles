@@ -13,6 +13,7 @@
 ## ファイル
 !init.el
 !/.gitignore
+!my-help.md
 
 ## ローカル環境依存用 config は無視する
 91-local-config.el

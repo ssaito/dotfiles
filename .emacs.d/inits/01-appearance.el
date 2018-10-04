@@ -4,13 +4,19 @@
 ;; 見た目の設定
 ;; -----------------------------------------
 
-; ウィンドウの透過設定
+; x-window 時のみの設定
 (if window-system (progn
+  ; ウィンドウの透過設定
   (set-frame-parameter (selected-frame) 'alpha '(95 85))
-))
+  ; 画面の隙間
+  (fringe-mode 2)
+  ; スクロールバー非表示
+  (set-scroll-bar-mode nil)
+  ; タイトルバーにファイルのフルパス表示
+  (setq frame-title-format
+      (format "%%f" (system-name)))
+  ))
  
-; 画面の隙間
-(fringe-mode 2)
 
 ; カラーテーマ
 ; sublime-themes
@@ -28,12 +34,6 @@
 ; メニューバー非表示
 (menu-bar-mode -1)
 
-; スクロールバー非表示
-(set-scroll-bar-mode nil)
-
-; タイトルバーにファイルのフルパス表示
-(setq frame-title-format
-      (format "%%f" (system-name)))
 
 ; 括弧の範囲内を強調表示
 (show-paren-mode t)
