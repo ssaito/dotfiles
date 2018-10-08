@@ -4,7 +4,8 @@
 ;; ref http://fukuyama.co/yasnippet
 ;;; Code:
 
-(require 'yasnippet)
+(use-package yasnippet
+  :straight t)
 (yas-global-mode 1)
 
 ;; 単語展開キーバインド (ver8.0から明記しないと機能しない)

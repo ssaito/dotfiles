@@ -3,6 +3,9 @@
 # マウス関連
 set-option -g mouse on
 
+#マウススクロール反映
+set-window-option -g mouse on
+
 # コピー。キーバインドはemacs "M-w"
 bind-key -t emacs-copy M-w copy-pipe "reattach-to-user-namespace pbcopy"
 

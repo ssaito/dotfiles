@@ -1,13 +1,15 @@
-(el-get-bundle company-mode)
+(use-pakage company-mode
+    :straight t
+    :config
+    ; 全バッファで有効にする 
+    (global-company-mode)
+    ; delay を0に
+    (setq company-idle-delay 0) 
+    ; 補完を開始する文字数
+    (setq company-minimum-prefix-length 2)
+    ; 候補の一番下でさらに下に行こうとすると一番上に戻る
+    (setq company-selection-wrap-around t))
 
-; 全バッファで有効にする 
-(global-company-mode)
-; delay を0に
-(setq company-idle-delay 0) 
-; 補完を開始する文字数
-(setq company-minimum-prefix-length 2)
-; 候補の一番下でさらに下に行こうとすると一番上に戻る
-(setq company-selection-wrap-around t)
 
 ; key
 (define-key company-active-map (kbd "M-n") nil) ; M-n のキーバインドなし
