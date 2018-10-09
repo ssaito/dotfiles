@@ -8,6 +8,7 @@
 (unless (file-directory-p el-get-recipe-path-elpa)
   (el-get-elpa-build-local-recipes))
 
+<<<<<<< HEAD
 ;; recentf の拡張。最近開いたファイルリストが便利になる
 (el-get-bundle recentf-ext)
 ;; 一時的なファイル作成 
@@ -16,13 +17,13 @@
 (el-get-bundle migemo)
 ;; 起動時のダッシュボード
 ; (el-get-bundle dashboard)
+=======
+>>>>>>> 7ce62f0e8af78b81fbee8ee47bf2b61feb4315a0
 
 ;; 入力支援
 (el-get-bundle yasnippet)
 (el-get-bundle fuzzy)
 
-;; カラーテーマ
-(el-get-bundle monokai-theme)
 
 ;; for ruby
 (el-get-bundle ruby-mode)

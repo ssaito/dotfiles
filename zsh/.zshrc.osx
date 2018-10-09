@@ -45,6 +45,8 @@ PATH=/usr/local/bin:$PATH
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 ## Cask の PATH
 PATH=~/.cask/bin:$PATH 
+## awsclt
+PATH=~/Library/Python/2.7/bin:$PATH
 
 # Alias
 alias e="emacsclient -n"

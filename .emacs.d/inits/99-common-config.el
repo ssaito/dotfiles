@@ -3,6 +3,16 @@
 ;; 基本的な共通設定
 ;;; Code:
 
+;; recentf の拡張。最近開いたファイルリストが便利になる
+(use-package recentf-ext
+  :straight t)
+;; 一時的なファイル作成 
+(use-package open-junk-file
+  :straight t)
+;; ローマ字入力で日本語検索
+(use-package migemo
+  :straight t)
+
 ; 日本語設定
 (set-language-environment 'Japanese)
 

@@ -15,12 +15,17 @@
   ; タイトルバーにファイルのフルパス表示
   (setq frame-title-format
       (format "%%f" (system-name)))
-  ))
- 
+  ; ダッシュボード
+  (use-package dashboard
+    :straight t
+    :config
+    (dashboard-setup-startup-hook)
+    (setq dashboard-items '((recents . 7)
+                            (projects . 7))))))
 
-; カラーテーマ
-; sublime-themes
-(load-theme 'monokai t)
+;; カラーテーマ
+(use-package monokai-theme
+  :straight t)
 
 (defun on-after-init ()
   (unless (display-graphic-p (selected-frame))
@@ -33,7 +38,6 @@
 
 ; メニューバー非表示
 (menu-bar-mode -1)
-
 
 ; 括弧の範囲内を強調表示
 (show-paren-mode t)
@@ -101,9 +105,12 @@
 
 ; warning のレベルを emergency に変更
 (setq warning-minimum-level :emergency)
+<<<<<<< HEAD
 
 ; ダッシュボード
 ;; (require 'dashboard)
 ;; (dashboard-setup-startup-hook)
 ;; (setq dashboard-items '((recents . 7)
 ;;                         (projects . 7)))
+=======
+>>>>>>> 7ce62f0e8af78b81fbee8ee47bf2b61feb4315a0
