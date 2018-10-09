@@ -80,3 +80,7 @@ git clone https://github.com/ssaito/dotfiles.git
 * http://levien.com/type/myfonts/inconsolata.html
 * コントロールパネル -> デスクトップのカスタマイズ→フォント」を開いて、ダウンロードしたフォントをドラッグ＆ドロップする
 
+### Emacsのインストール
+
+* el-getの問題を解決しよう
+* http://d.hatena.ne.jp/zqwell-ss/20130324/1364129779

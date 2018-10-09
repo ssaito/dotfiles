@@ -25,27 +25,13 @@ elif [ "$(expr substr $(uname -s) 1 9)" == 'CYGWIN_NT' ]; then
 
     # cygwin .gitcofig はハードリンクでなけばはらない
 
-    # apt-cyg のインストール
-    wget https://raw.githubusercontent.com/transcode-open/apt-cyg/master/apt-cyg
-    chmod 755 apt-cyg
-    mv apt-cyg /usr/bin/apt-cyg
-    
-    # apt-cyg のミラーサイトのアップデート
-    apt-cyg -m ftp://ftp.iij.ad.jp/pub/cygwin/ update
-
-    # apt-cyg を使ってパッケージをインストール
-    # zsh にログインシェルを変更する
-    # /etc/passwd がなかったら作る
-    mkpasswd -l > /etc/passwd
-    mkpasswd | sed "s/\:\/bin\/bash/\:\/bin\/zsh/g" > /etc/passwd
-
     if [ $? -le 0 ]; then
         echo "created $HOME/$file"
     fi
 else
   echo "Your platform ($(uname -a)) is not supported."
   exit 1
-fi
+fiｘｓ
 
 
 # mintty リンク
@@ -55,9 +41,3 @@ ln -s ~/dotfiles/terminal/.minttyrc ~/.minttyrc
 # for git
 git config user.name "ssaito"
 git config user.email "shinya.saito.25a@gmail.com"
-
-# for python
-pip install rope
-pip install jedi
-pip install flake8
-pip install importmagic
