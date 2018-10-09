@@ -47,6 +47,11 @@ dotfiles だけでなくCLI環境構築に必要なファイルを管理する�
 C:\msys64\msys2_shell.cmd -mingw64
 ```
 
+### 環境変数 PATH の設定(windows10の場合)
+デフォルトでは、Windows の環境変数 PATH の設定を 引き継がない。
+コントロールパネル → システムとセキュリティ → システム → システムの詳細設定 →詳細設定 → 環境変数 から
+Windows の環境変数に MSYS2_PATH_TYPE を追加し、値を inherit に設定する。
+
 ### Pacman のプロキシ設定を行う
 
 C:\msys64\etc\profile.d 以下に proxy.sh を配置する。PROXY_USER、PROXY_PASSWORD、PROXY_HOST、PROXY_PORTは自身の環境に合わせて変更する

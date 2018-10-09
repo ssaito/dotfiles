@@ -1,5 +1,24 @@
 # プロンプト設定
 # for msys2
+# プロンプト設定
+# 例
+# [shinya@SS-MBP] <2015/02/04 08:05> [master](+)
+# $                                               [/Users/shinya/dotfiles]
+
+## set prompt
+setopt prompt_subst
+
+## バージョン管理システムモジュールの設定
+autoload -Uz vcs_info
+
+## コピペしやすいようにコマンド実行後は右プロンプトを消す。
+setopt transient_rprompt
+
+PROMPT='[%{'$'\e[''34m%}%n%{'$'\e[''m%}@%{'$'\e[''36m%}%m%{'$'\e[''m%}] <%{%B%}%D{%Y/%m/%d %H:%M}%{%b%}>  '$'\n%U$%u '
+PROMPT2='%{'$'\e[''33m%} > %{'$'\e[''m%}'
+RPROMPT='%{'$'\e[''$[31+RANDOM % 7]m%}[%40<...<%/]%b%{'$'\e[''m%}'
+SPROMPT='%{'$'\e[''37m%} %r is correct? [n,y,a,e]: %{'$'\e[''m%}'
+
 
 # エイリアス
 

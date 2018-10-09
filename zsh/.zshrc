@@ -1,7 +1,7 @@
 # 補完設定
 fpath=(~/dotfiles/zsh/zsh-completions/src $fpath)
-autoload -U compinit
-compinit
+autoload -Uz compinit
+compinit -u
 
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' format '%B%d%b'
@@ -73,41 +73,5 @@ alias mv='mv -i'
 alias ...='../..'
 alias ....='../../..'
 
-# プロンプト設定
-# 例
-# [shinya@SS-MBP] <2015/02/04 08:05> [master](+)
-# $                                               [/Users/shinya/dotfiles]
-
-## set prompt
-setopt prompt_subst
-
-## バージョン管理システムモジュールの設定
-autoload -Uz vcs_info
-
-zstyle ':vcs_info:git:*' check-for-changes true
-## git コミットしていないファイルがあれば (!) を表示する
-zstyle ':vcs_info:git:*' stagedstr "%F{yellow}(!)%f"
-## git配下にないファイルがあれば (+) を表示する
-zstyle ':vcs_info:git:*' unstagedstr "%F{red}(+)%f"
-## 表示フォーマット [ブランチ名](!)(+)
-zstyle ':vcs_info:*' formats "%F{green}[%b]%u%c%f"
-## マージ/コンフリクトが起こったときのフォーマット [マージ元|マージ先]
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
-
-precmd () {
-    psvar=()
-    LANG=en_US.UTF-8 vcs_info
-    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
-
-## コピペしやすいようにコマンド実行後は右プロンプトを消す。
-setopt transient_rprompt
-
-PROMPT='[%{'$'\e[''34m%}%n%{'$'\e[''m%}@%{'$'\e[''36m%}%m%{'$'\e[''m%}] <%{%B%}%D{%Y/%m/%d %H:%M}%{%b%}> ${vcs_info_msg_0_} '$'\n%U$%u '
-PROMPT2='%{'$'\e[''33m%} > %{'$'\e[''m%}'
-RPROMPT='%{'$'\e[''$[31+RANDOM % 7]m%}[%40<...<%/]%b%{'$'\e[''m%}'
-SPROMPT='%{'$'\e[''37m%} %r is correct? [n,y,a,e]: %{'$'\e[''m%}'
-
 # OS 個別設定を読み込む
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
-

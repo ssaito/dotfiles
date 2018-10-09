@@ -103,7 +103,7 @@
 (setq warning-minimum-level :emergency)
 
 ; ダッシュボード
-(require 'dashboard)
-(dashboard-setup-startup-hook)
-(setq dashboard-items '((recents . 7)
-                        (projects . 7)))
+;; (require 'dashboard)
+;; (dashboard-setup-startup-hook)
+;; (setq dashboard-items '((recents . 7)
+;;                         (projects . 7)))

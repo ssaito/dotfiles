@@ -4,6 +4,9 @@
 ;; パッケージリポジトリの指定
 ;; -----------------------------------------
 ;;; Code:
+(require 'el-get-elpa)
+(unless (file-directory-p el-get-recipe-path-elpa)
+  (el-get-elpa-build-local-recipes))
 
 ;; recentf の拡張。最近開いたファイルリストが便利になる
 (el-get-bundle recentf-ext)
@@ -12,7 +15,7 @@
 ;; ローマ字入力で日本語検索
 (el-get-bundle migemo)
 ;; 起動時のダッシュボード
-(el-get-bundle dashboard)
+; (el-get-bundle dashboard)
 
 ;; 入力支援
 (el-get-bundle yasnippet)
@@ -40,13 +43,13 @@
 
 ;; IDE的なビューや機能を提供する
 (el-get-bundle eproject)
-(el-get-bundle zk/emacs-dirtree
-  :depends(tree-mode windata))
 
 ;; helm
-(el-get-bundle helm)
-(el-get-bundle helm-descbinds)
-(el-get-bundle helm-ag)
+;(el-get-bundle helm)
+;(el-get-bundle helm-descbinds)
+;(el-get-bundle helm-ag)
+
+(el-get-bundle elpa:counsel)
 
 ;; 範囲を選択するときに単語→シンボル→S式と広げてくれる便利マイナーモード
 (el-get-bundle expand-region)
