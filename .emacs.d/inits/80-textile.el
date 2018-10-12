@@ -1,2 +1,2 @@
-(require 'textile-mode)
-
+(use-package textile-mode
+  :straight t)

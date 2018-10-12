@@ -1,4 +1,4 @@
-(use-pakage company-mode
+(use-package company
     :straight t
     :config
     ; 全バッファで有効にする 

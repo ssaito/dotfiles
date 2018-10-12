@@ -1,4 +1,5 @@
-(require 'ivy)
+(use-package counsel
+  :straight t)
 
 (ivy-mode 1) ;; デフォルトの入力補完がivyになる
 (counsel-mode 1)

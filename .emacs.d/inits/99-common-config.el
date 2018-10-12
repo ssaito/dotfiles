@@ -9,9 +9,6 @@
 ;; 一時的なファイル作成 
 (use-package open-junk-file
   :straight t)
-;; ローマ字入力で日本語検索
-(use-package migemo
-  :straight t)
 
 ; 日本語設定
 (set-language-environment 'Japanese)
@@ -76,7 +73,12 @@
 (setq my_hidden-minor-modes
       '(yas-minor-mode
         eproject-mode
-        helm-mode))
+        helm-mode
+        company-mode
+        counsel-mode
+        ivy-mode
+        eldoc-mode
+        projectile-mode))
 (mapc (lambda (mode)
         (setq minor-mode-alist
               (cons (list mode "")

@@ -1,5 +1,7 @@
 ;; web-mode setting
-(require 'web-mode)
+(use-package web-mode
+  :straight t)
+
 ;; *.phtml, *.html, *.htm, *.tpl.php, *.jsp, *.ascx, *.aspx, *.erb
 (add-to-list 'auto-mode-alist '("\\.p?html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -13,7 +15,8 @@
 (define-key web-mode-map (kbd "C-c C-l") 'web-mode-element-parent)
 (define-key web-mode-map (kbd "C-c C-m") 'web-mode-mark-and-expand)
 
-(require 'smartrep)
+(use-package smartrep
+  :straight t)
 (smartrep-define-key web-mode-map "C-c"
   '(("C-n" . web-mode-element-next)
     ("C-p" . web-mode-element-previous)

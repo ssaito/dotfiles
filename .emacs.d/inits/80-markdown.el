@@ -3,8 +3,10 @@
 ;;;  markdown-modeは使わずgfm-modeを使う
 
 ;;; Code:
-(require 'org)
-(require 'markdown-mode)
+(use-package org
+  :straight t)
+(use-package markdown-mode
+  :straight t)
 
 ; 拡張子 .md .txt .text を開いたら自動的に gfm-mode(GitHub Flavored Markdown) にする
 (setq auto-mode-alist (append
