@@ -6,6 +6,7 @@
 ;; M-x, C-x C-fなどのEmacsの基本的な組み込みコマンドをivy版にリマップする
 
 ;;; 下記は任意で有効化
+(global-set-key (kbd "C-x C-r") 'ivy-recentf)
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
