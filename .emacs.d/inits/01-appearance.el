@@ -23,7 +23,6 @@
 (defun on-after-init ()
   (unless (display-graphic-p (selected-frame))
     (set-face-background 'default "unspecified-bg" (selected-frame))))
-
 (add-hook 'window-setup-hook 'on-after-init)
 
 ; ツールバー非表示
@@ -35,7 +34,7 @@
 ; 括弧の範囲内を強調表示
 (show-paren-mode t)
 (setq show-paren-delay 0)
-(setq show-paren-style 'expression)
+(setq show-paren-style 'mixed)
 
 ; 選択領域の色
 (set-face-background 'region "white")

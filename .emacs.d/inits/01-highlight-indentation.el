@@ -6,12 +6,11 @@
 ;; -----------------------------------------
 
 ;;; Code:
-;; ハイライトするインデントは幅２
-(setq highlight-indentation-mode-hook 2)
+(use-package highlight-indent-guides
+  :straight t)
 
-;; デフォルトで現在行のインデントハイライトを有効にするモード
-(dolist (hook '(yaml-mode-hook
-                xml-mode-hook
-                python-mode-hook))
-  (add-hook hook 'highlight-indentation-current-column-mode))
-
+(setq highlight-indent-guides-method 'character)
+(setq highlight-indent-guides-auto-enabled nil)
+(set-face-background 'highlight-indent-guides-odd-face "darkgray")
+(set-face-background 'highlight-indent-guides-even-face "dimgray")
+(set-face-foreground 'highlight-indent-guides-character-face "#343434")

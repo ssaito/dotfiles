@@ -2,25 +2,30 @@
 
 自分用のコマンド、キーバインドの覚書
 
+## ivy/counsel
+
+* 入力支援
+
+### 過去に開いたファイルの検索
+
+* C-x C-r
+
+### 過去のivy/conselコマンドの結果
+
+* M-p (前に一つ戻る)
+* M-n (次に一つ進む)
+
+## JSON
+
+### 分かりやすく整形
+
+* json-pretty-print
+
 ## プロジェクト
 
 * プロジェクトを開く
 
-```
-;; ファイルを開く
-C-x-f
-;; projectile で開く。最初に開くときは時間がかかるので注意
-M-x helm-projectile-switch-project
-```
+### プロジェクトのファイルを開く
 
-* ディレクトリツリーを表示する
+* C-x-f
 
-```
-ep-diretree
-```
-
-* プロジェクト内 grep
-
-```
-M-x helm-projectile-ag
-```

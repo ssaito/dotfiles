@@ -1,8 +1,10 @@
 ;;; package --- emacs settings for Cocoa(Mac)
 ;;; Commentary:
-
 ;;; Code:
 (define-key global-map [?¥] [?\\])  ;; ¥の代わりにバックスラッシュを入力する
+
+; 左オプションをmeta key にすろ
+(setq mac-option-modifier 'meta)
 
 ; tmux 上の emacsのクリップボード共有
 (defun copy-from-osx ()
