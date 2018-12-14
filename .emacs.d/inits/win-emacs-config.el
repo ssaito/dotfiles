@@ -56,9 +56,8 @@
   (setq w32-ime-mode-line-state-indicator-list '("[--]" "[あ]" "[--]"))
   (w32-ime-initialize)
   ;; 日本語入力時にカーソルの色を変える設定
-  (add-hook 'w32-ime-on-hook '(lambda () (set-cursor-color "coral4")))
-  (add-hook 'w32-ime-off-hook '(lambda () (set-cursor-color "black")))
-
+  (add-hook 'w32-ime-on-hook '(lambda () (set-cursor-color "#A6E22E")))
+  (add-hook 'w32-ime-off-hook '(lambda () (set-cursor-color "white")))
   ;; ミニバッファに移動した際は最初に日本語入力が無効な状態にする
   (add-hook 'minibuffer-setup-hook 'deactivate-input-method)
 

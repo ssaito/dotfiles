@@ -33,11 +33,17 @@ alias ll='ls -l --show-control-chars --color=auto'
 alias e='emacsclientw.exe -n'
 
 ## コマンドプロンプトのコマンドは winpty 経由で実行する
-alias ping='winpty ping'
-alias ipconfig='winpty ipconfig'
-alias ifconfig='ipconfig' # ifconfig と打ち間違えても大丈夫
-alias nslookup='winpty nslookup'
-alias reg='winpty reg'
+function wincmd() {
+    CMD=$1
+    shift
+    $CMD $* 2>&1 | iconv -f cp932 -t utf-8
+}
+alias ipconfig='wincmd ipconfig'
+alias netstat='wincmd netstat'
+alias ping='wincmd ping'
+alias nslookup='wincmd nslookup'
+alias reg='wincmd reg'
+alias sc='wincmd sc'
 
 ## ln コマンドを DOSの mklink にする環境変数設定
 ## ref http://qiita.com/ubnt_intrepid/items/0d9ea1c792dd2049d71c
