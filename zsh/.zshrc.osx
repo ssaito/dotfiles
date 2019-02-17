@@ -47,6 +47,8 @@ PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 PATH=~/.cask/bin:$PATH 
 ## awsclt
 PATH=~/Library/Python/2.7/bin:$PATH
+# MacOS High Sierra から openssl が LibreSSL になってしまったので openssl にする
+PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # Alias
 alias e="emacsclient -n"

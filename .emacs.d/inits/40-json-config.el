@@ -5,7 +5,7 @@
 
 (use-package json-mode
   :straight t
-  :mode "\\.json\\"
+  :mode "\\.json\\'"
   :config (setq-default json-reformat:indent-width 2
                         json-indent-level 2))
 
