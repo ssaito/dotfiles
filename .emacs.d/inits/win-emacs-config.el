@@ -20,6 +20,10 @@
   (setq dashboard-items '((recents . 7)
                           (projects . 7))))
 
+;; GUI上でコピペするときの文字コードは Windowsの場合、utf-16-le を指定する
+;; https://rufflewind.com/2014-07-20/pasting-unicode-in-emacs-on-windows
+(set-selection-coding-system 'utf-16-le)
+
 ;; カッコイイステータスバー
 (use-package powerline
     :straight t)

@@ -1,4 +1,4 @@
-﻿# Saito's dotfiles 
+# Saito's dotfiles 
 
 dotfiles だけでなくCLI環境構築に必要なファイルを管理するリポジトリです。
 
@@ -89,3 +89,18 @@ git clone https://github.com/ssaito/dotfiles.git
 
 * el-getの問題を解決しよう
 * http://d.hatena.ne.jp/zqwell-ss/20130324/1364129779
+
+
+### Git
+
+``` shell
+$ ln -s ~/dotfiles/git/.gitconfig ~/.gitconfig
+$ ln -s ~/dotfiles/git/.git_template ~/.git_template
+$ ln -s ~/dotfiles/git/.gitignore ~/.gitignore
+```
+
+### dotfiles のリポジトリ設定
+
+$ git config --local user.name "ssaito"
+$ git config --local user.email "${email}"
+
