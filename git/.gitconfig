@@ -14,7 +14,7 @@
 	cm = commit
 	st = status
 	df = diff
-	list = log --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --date=short
-	graph = log --graph --pretty='format:%C(cyan)%h%Cblue%d%Creset %s %C(green)%an, %ar%Creset'
+	log-simple = log --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --date=short --reverse --decorate
+	log-graph = log --graph --pretty='format:%C(cyan)%h%Cblue%d%Creset %s %C(green)%an, %ar%Creset'
 [init]
 	templatedir = ~/.git_template

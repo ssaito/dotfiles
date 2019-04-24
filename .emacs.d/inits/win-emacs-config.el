@@ -36,11 +36,14 @@
 		      :height 100)
 (set-fontset-font
    nil 'japanese-jisx0208
-   (font-spec :family "メイリオ"))
+   (font-spec :family "游ゴシック Medium"
+              :height 100))
 ;; Inconsolataとメイリオの半角:全角の幅が1:2にするための設定
 (setq face-font-rescale-alist
 	'((".*Inconsolata.*" . 1.2)
-	  (".*メイリオ.*" . 1.0)))
+	  (".*游ゴシック Medium.*" . 1.0)))
+(setq-default line-spacing 0)
+
 
 ;; Cygwin のドライブ・プレフィックスを有効に
 (use-package company

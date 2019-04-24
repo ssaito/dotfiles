@@ -7,10 +7,11 @@
 
 ;;; Code:
 (use-package highlight-indent-guides
-  :straight t)
-
-(setq highlight-indent-guides-method 'character)
-(setq highlight-indent-guides-auto-enabled nil)
-(set-face-background 'highlight-indent-guides-odd-face "darkgray")
-(set-face-background 'highlight-indent-guides-even-face "dimgray")
-(set-face-foreground 'highlight-indent-guides-character-face "#343434")
+  :straight t
+  :diminish
+    :hook
+    ((prog-mode yaml-mode) . highlight-indent-guides-mode)
+    :custom
+    (highlight-indent-guides-auto-enabled t)
+    (highlight-indent-guides-responsive t)
+    (highlight-indent-guides-method 'column))
