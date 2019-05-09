@@ -27,6 +27,22 @@ dotfiles だけでなくCLI環境構築に必要なファイルを管理する�
 * http://joker.hatenablog.com/entry/2014/11/09/014607
 * http://nomnel.net/blog/boxen-to-brewfile/
 
+### Dock
+
+自動的に表示/非表示
+
+### trackpad
+
+* 調べる＆データ検出:３本指でタップ
+* 副ボタンのクリック:2本指でクリック
+* スクロールとズーム：全部対応
+
+### キーボード
+
+Touch Bar: F1、F2などのキー
+装飾キー: 
+  Caps Lock Option
+
 ## Windows 向けセットアップ
 
 ### MSYS2 をインストールする
