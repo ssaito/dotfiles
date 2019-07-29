@@ -126,3 +126,24 @@ $ ln -s ~/dotfiles/git/.gitignore ~/.gitignore
 $ git config --local user.name "ssaito"
 $ git config --local user.email "${email}"
 
+
+## zsh
+
+### zshの補完設定
+
+基本的には https://github.com/zsh-users/zsh-completions を利用
+
+``` shell
+$ cd ~/dotfiles/zsh
+$ git submodule init
+$ cd zsh-completions
+$ git pull origin master
+```
+docker系の補完がないので手動で入れる
+
+``` shell
+$ curl -L https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker > ~/dotfiles/zsh/zsh-completions/src/_docker
+$ curl -L https://raw.githubusercontent.com/docker/compose/master/contrib/completion/zsh/_docker-compose > ~/dotfiles/zsh/zsh-completions/src/_docker-compose
+```
+
+

@@ -73,5 +73,8 @@ alias mv='mv -i'
 alias ...='../..'
 alias ....='../../..'
 
+## zshを再起動する
+alias relogin='exec /bin/zsh -l'
+
 # OS 個別設定を読み込む
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
