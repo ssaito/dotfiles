@@ -6,14 +6,14 @@
 
 # for zsh
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
-ln -s ~/dotfiles/zsh/.zshrc.linux ~/.zshrc.local
+ln -s ~/dotfiles/zsh/.zshrc.osx ~/.zshrc.local
 
 # for emacs
 ln -s ~/dotfiles/.emacs.d ~/.emacs.d
 
 # for tmux
 ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/tmux/.tmux.conf.linux ~/.tmux.conf.local 
+ln -s ~/dotfiles/tmux/.tmux.conf.osx ~/.tmux.conf.local 
 
 # for git
 ln -s ~/dotfiles/git/.gitconfig ~/.gitconfig
