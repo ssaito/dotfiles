@@ -18,5 +18,9 @@
 ## ローカル環境依存用 config は無視する
 91-local-config.el
 
+## flycheck.el は無視する
+30-flycheck.el
+
 ## 6X 番台のプログラミング言語用 config は無視する
 6*.el
+

@@ -22,6 +22,7 @@ brew install brew-cask
 
 # パッケージのインストール
 brew install zsh
+brew install zplug
 brew install git 
 brew install tree
 brew install tmux # マルチターミナル

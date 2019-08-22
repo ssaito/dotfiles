@@ -1,3 +1,21 @@
+# zplug
+source ~/.zplug/init.zsh
+
+zplug 'zsh-users/zsh-autosuggestions'
+zplug 'zsh-users/zsh-completions'
+zplug 'zsh-users/zsh-syntax-highlighting'
+
+# 未インストール項目をインストールする
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# コマンドをリンクして、PATH に追加し、プラグインは読み込む
+zplug load --verbose
+
 # 補完設定
 fpath=(~/dotfiles/zsh/zsh-completions/src $fpath)
 autoload -Uz compinit
