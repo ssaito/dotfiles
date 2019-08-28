@@ -7,9 +7,8 @@
 ;; -----------------------------------------
 
 ;; 静的コード解析ツール
-(el-get-bundle flycheck)
-(el-get-bundle flycheck-pos-tip)
-
+(use-package flycheck
+  :straight t)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 (eval-after-load 'flycheck

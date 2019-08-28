@@ -1,5 +1,6 @@
 # zplug
-source ~/.zplug/init.zsh
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
 zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions'
@@ -16,10 +17,10 @@ fi
 # コマンドをリンクして、PATH に追加し、プラグインは読み込む
 zplug load --verbose
 
-# 補完設定
-fpath=(~/dotfiles/zsh/zsh-completions/src $fpath)
+# 補完設定 
+# fpath=(~/dotfiles/zsh/zsh-completions/src $fpath)
 autoload -Uz compinit
-compinit -u
+compinit
 
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' format '%B%d%b'
