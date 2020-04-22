@@ -19,3 +19,6 @@ ln -s ~/dotfiles/tmux/.tmux.conf.osx ~/.tmux.conf.local
 ln -s ~/dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/git/.git_template ~/.git_template
 ln -s ~/dotfiles/git/.gitignore ~/.gitignore
+
+# for brewfile
+ln -s ~/dotfiles/package/Brewfile ~/Brewfile

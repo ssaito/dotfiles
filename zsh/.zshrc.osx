@@ -50,6 +50,9 @@ PATH=~/Library/Python/2.7/bin:$PATH
 # MacOS High Sierra から openssl が LibreSSL になってしまったので openssl にする
 PATH="/usr/local/opt/openssl/bin:$PATH"
 
+# anyenv
+eval "$(anyenv init -)"
+
 # Alias
 alias e="emacsclient -n"
 alias emacs='env TERM=xterm-256color emacs -nw'
