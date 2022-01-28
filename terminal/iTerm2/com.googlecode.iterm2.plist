@@ -8,12 +8,6 @@
 	<false/>
 	<key>AnimateDimming</key>
 	<false/>
-	<key>AppleAntiAliasingThreshold</key>
-	<integer>1</integer>
-	<key>AppleScrollAnimationEnabled</key>
-	<integer>0</integer>
-	<key>AppleSmoothFixedFontsSizeThreshold</key>
-	<integer>1</integer>
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
@@ -257,6 +251,8 @@
 	<false/>
 	<key>FsTabDelay</key>
 	<real>1</real>
+	<key>HapticFeedbackForEsc</key>
+	<false/>
 	<key>HiddenAFRStrokeThickness</key>
 	<real>0.0</real>
 	<key>HiddenAdvancedFontRendering</key>
@@ -281,6 +277,8 @@
 	<integer>63247</integer>
 	<key>HotkeyCode</key>
 	<integer>111</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>8388864</integer>
 	<key>IRMemory</key>
@@ -291,56 +289,8 @@
 	<integer>7</integer>
 	<key>LeftOption</key>
 	<integer>2</integer>
-	<key>LoadPrefsFromCustomFolder</key>
-	<true/>
 	<key>MaxVertically</key>
 	<false/>
-	<key>NSColorPanelMode</key>
-	<string>1</string>
-	<key>NSColorPickerSlidersDefaults</key>
-	<string>1</string>
-	<key>NSNavLastRootDirectory</key>
-	<string>~/dotfiles/terminal/iTerm2</string>
-	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 459}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{712, 521}</string>
-	<key>NSQuotedKeystrokeBinding</key>
-	<string></string>
-	<key>NSRepeatCountBinding</key>
-	<string></string>
-	<key>NSScrollAnimationEnabled</key>
-	<false/>
-	<key>NSTableView Columns KeyBingingTable</key>
-	<array>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATCG
-		</data>
-		<string>198</string>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATGG
-		</data>
-		<string>302</string>
-	</array>
-	<key>NSTableView Hidden Columns KeyBingingTable</key>
-	<array/>
-	<key>NSTableView Sort Ordering KeyBingingTable</key>
-	<array/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
-	<key>NSWindow Frame NSColorPanel</key>
-	<string>310 397 228 325 0 0 1280 1001 </string>
-	<key>NSWindow Frame Preferences</key>
-	<string>276 193 924 485 0 0 1280 1001 </string>
-	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 385 1280 616 0 0 1280 1001 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>52 162 985 768 0 0 1280 1001 </string>
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -896,7 +846,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 12</string>
+			<string>Monaco 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1073,10 +1023,6 @@
 			<string>/Users/saito</string>
 		</dict>
 	</array>
-	<key>NoSyncTimeOfLastPromo</key>
-	<real>470722154.92241597</real>
-	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>473750032.70079303</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1122,24 +1068,14 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
-	<key>PrefsCustomFolder</key>
-	<string>/Users/saito/dotfiles/terminal/iTerm2</string>
 	<key>PromptOnQuit</key>
-	<true/>
+	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
-	<true/>
+	<false/>
 	<key>RightCommand</key>
 	<integer>8</integer>
 	<key>RightOption</key>
 	<integer>3</integer>
-	<key>SUEnableAutomaticChecks</key>
-	<true/>
-	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml</string>
-	<key>SUHasLaunchedBefore</key>
-	<true/>
-	<key>SULastCheckTime</key>
-	<date>2016-01-07T07:23:48Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1147,6 +1083,8 @@
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
+	<false/>
+	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.40000000596046448</real>
@@ -1170,13 +1108,13 @@
 	<true/>
 	<key>UseLionStyleFullscreen</key>
 	<true/>
+	<key>VisualIndicatorForEsc</key>
+	<false/>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
-	<key>iTerm Version</key>
-	<string>2.1.4</string>
 </dict>
 </plist>

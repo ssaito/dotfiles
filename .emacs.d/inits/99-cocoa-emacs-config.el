@@ -1,0 +1,1 @@
+/Users/shinya.saito/.emacs.d/inits/cocoa-emacs-config.el

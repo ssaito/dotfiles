@@ -1,42 +1,5 @@
 # zsh の osx 向け設定
 
-# プロンプト設定
-# 例
-# [shinya@SS-MBP] <2015/02/04 08:05> [master](+)
-# $                                               [/Users/shinya/dotfiles]
-
-## set prompt
-setopt prompt_subst
-
-## バージョン管理システムモジュールの設定
-autoload -Uz vcs_info
-
-zstyle ':vcs_info:git:*' check-for-changes true
-## git コミットしていないファイルがあれば (!) を表示する
-zstyle ':vcs_info:git:*' stagedstr "%F{yellow}(!)%f"
-## git配下にないファイルがあれば (+) を表示する
-zstyle ':vcs_info:git:*' unstagedstr "%F{red}(+)%f"
-## 表示フォーマット [ブランチ名](!)(+)
-zstyle ':vcs_info:*' formats "%F{green}[%b]%u%c%f"
-## マージ/コンフリクトが起こったときのフォーマット [マージ元|マージ先]
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
-## use-simple
-zstyle ':vcs_info:*' use-simple true
-
-precmd () {
-   psvar=()
-   LANG=en_US.UTF-8 vcs_info
-   [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
-
-## コピペしやすいようにコマンド実行後は右プロンプトを消す。
-setopt transient_rprompt
-
-PROMPT='[%{'$'\e[''34m%}%n%{'$'\e[''m%}@%{'$'\e[''36m%}%m%{'$'\e[''m%}] <%{%B%}%D{%Y/%m/%d %H:%M}%{%b%}> ${vcs_info_msg_0_} '$'\n%U$%u '
-PROMPT2='%{'$'\e[''33m%} > %{'$'\e[''m%}'
-RPROMPT='%{'$'\e[''$[31+RANDOM % 7]m%}[%40<...<%/]%b%{'$'\e[''m%}'
-SPROMPT='%{'$'\e[''37m%} %r is correct? [n,y,a,e]: %{'$'\e[''m%}'
-
 # PATH
 
 # /usr/local/bin have priority all ather
@@ -51,17 +14,17 @@ PATH=~/Library/Python/2.7/bin:$PATH
 PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # anyenv
-eval "$(anyenv init -)"
+eval "$(anyenv init - zsh)"
 
 # Alias
 alias e="emacsclient -n"
 alias emacs='env TERM=xterm-256color emacs -nw'
 alias runemacs="open /Applications/Emacs.app"
 alias ls='ls -Fa --show-control-chars --color=auto'
-alias ll='ls -la --show-control-chars --color=auto'
 alias less='less -X'
 alias diff='colordiff -u'
 
 # less syntax-highlight
 export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
+export PATH="/Users/shinya.saito/lib/apache-maven-3.6.3/bin:$PATH"

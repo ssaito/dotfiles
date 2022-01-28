@@ -52,14 +52,15 @@ zstyle ':chpwd:*' recent-dirs-max 50
 zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
 
-
 # command correct edition before each completion attempt
 setopt correct
 
 # PATH
 
 ## add ~/bin to PATH
+
 PATH=$PATH:~/bin
+PATH=/usr/local/sbin:$PATH
 
 ## 「/」も単語区切りとみなす。
 WORDCHARS=${WORDCHARS:s,/,,}
@@ -91,9 +92,24 @@ alias mv='mv -i'
 ## 親ディレクトリへの移動
 alias ...='../..'
 alias ....='../../..'
+alias ll="exa -l -h -@ -mU --icons --git --time-style=long-iso --color=automatic --group-directories-first"
 
 ## zshを再起動する
 alias relogin='exec /bin/zsh -l'
+
+
+# for Prezto
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+## Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+## To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # OS 個別設定を読み込む
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

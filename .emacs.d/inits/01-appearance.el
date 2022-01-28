@@ -16,6 +16,9 @@
   (setq frame-title-format
       (format "%%f" (system-name)))))
 
+;; for emacs 2.7
+(setq custom--inhibit-theme-enable nil)
+
 ;; カラーテーマ
 (use-package monokai-theme
   :straight t)
