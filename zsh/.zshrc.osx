@@ -21,6 +21,7 @@ alias e="emacsclient -n"
 alias emacs='env TERM=xterm-256color emacs -nw'
 alias runemacs="open /Applications/Emacs.app"
 alias ls='ls -Fa --show-control-chars --color=auto'
+alias ll="exa -l -h -@ -mU --icons --git --time-style=long-iso --color=automatic --group-directories-first"
 alias less='less -X'
 alias diff='colordiff -u'
 

@@ -92,7 +92,6 @@ alias mv='mv -i'
 ## 親ディレクトリへの移動
 alias ...='../..'
 alias ....='../../..'
-alias ll="exa -l -h -@ -mU --icons --git --time-style=long-iso --color=automatic --group-directories-first"
 
 ## zshを再起動する
 alias relogin='exec /bin/zsh -l'
