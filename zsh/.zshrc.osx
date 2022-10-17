@@ -21,7 +21,7 @@ alias e="emacsclient -n"
 alias emacs='env TERM=xterm-256color emacs -nw'
 alias runemacs="open /Applications/Emacs.app"
 alias ls='ls -Fa --show-control-chars --color=auto'
-alias ll="exa -l -h -@ -mU --icons --git --time-style=long-iso --color=automatic --group-directories-first"
+alias ll="exa -l -h -mU --icons --git --time-style=long-iso --color=automatic --group-directories-first"
 alias less='less -X'
 alias diff='colordiff -u'
 
@@ -29,3 +29,8 @@ alias diff='colordiff -u'
 export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 export PATH="/Users/shinya.saito/lib/apache-maven-3.6.3/bin:$PATH"
+
+# Configuration for vagrant with docker
+export DOCKER_HOST=tcp://docker.local:2375
+
+export PATH=/usr/local/opt/mysql-client/bin:$PATH

@@ -5,6 +5,8 @@ source $ZPLUG_HOME/init.zsh
 zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions'
 zplug 'zsh-users/zsh-syntax-highlighting'
+zplug "plugins/docker", from:oh-my-zsh
+zplug "plugins/docker-compose", from:oh-my-zsh
 
 # 未インストール項目をインストールする
 if ! zplug check --verbose; then
@@ -19,8 +21,8 @@ zplug load --verbose
 
 # 補完設定 
 # fpath=(~/dotfiles/zsh/zsh-completions/src $fpath)
-autoload -Uz compinit
-compinit
+#autoload -Uz compinit
+#compinit
 
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' format '%B%d%b'

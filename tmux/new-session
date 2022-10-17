@@ -13,4 +13,3 @@ setw main-pane-height 28
 resize-pane -R -t 2 22
 
 display-panes
-

@@ -11,3 +11,7 @@ bind-key -T copy-mode M-w send -X copy-pipe-and-cancel "reattach-to-user-namespa
 
 ## tmux 内部での Mac OS X クリップボードのやりとり (pbcopy/pbpaste) を可能にする。
 set-option -g default-command "reattach-to-user-namespace -l zsh"
+
+# zsh をデフォルトに
+set-option -g default-shell /bin/zsh
+set -g default-command /bin/zsh
