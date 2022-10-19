@@ -7,6 +7,8 @@
 # for zsh
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/dotfiles/zsh/.zshrc.osx ~/.zshrc.local
+ln -s ~/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
+
 
 # for emacs
 ln -s ~/dotfiles/.emacs.d ~/.emacs.d

@@ -6,7 +6,7 @@ zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions'
 zplug 'zsh-users/zsh-syntax-highlighting'
 zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/docker-compose", from:oh-my-zsh
+zplug 'romkatv/powerlevel10k', as:theme, depth:1
 
 # 未インストール項目をインストールする
 if ! zplug check --verbose; then
